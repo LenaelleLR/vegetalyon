@@ -51,5 +51,11 @@ git push -f origin master
 
 **Economiquement** : alternative à la rénovation pour la gestion des eaux pluviales et la ventilation (albédo important)
 
+Explication du fonctionnement des toits végétalisés dans l'image (lien ci-dessous) : 
+
 [<img src="https://www.guidebatimentdurable.brussels/servlet/Repository/65770.jpg?ID=65770">](https://www.guidebatimentdurable.brussels/servlet/Repository/65770.jpg?ID=65770)
+
+*Peut-être que pour nous, si on veut amener des arbres, il faudrait utiliser une toiture-jardin, donc une végatation intensive*
+
+Autres solutions pour amener de la "verdure" en ville : serres de culture ( par exemple plantes aromatiques et fruits rouges ) ou fermes aquaponiques (culture de végétaux en symbiose avec l'élevage de poissons)
 
