@@ -106,4 +106,13 @@ Dans les tableaux ci-dessous, on a la classification des résultats des indicate
 
 On obtient alors le potentiel de la manière suivante (avec A, B et C coefficients à discuter dont la somme est 1): 
 
-*Potentiel = SUN_RATIO*(A*ET + B*RICU + C*SVV)*
+*Potentiel = SUN_RATIO(AxET + BxRICU + CxSVV)*
+
+## Chapitre 5 : Conclusions et perspectives
+
+**Résultats :** 50% des toits examinés pourraient être végétalisés 
+
+**Pistes d'amélioration** : 
+- Coefficients de priorité à discuter avec des professionnels du métiers
+- Automatiser la détection des toits plats
+- Créer de nouveaux critères ou améliorer ceux-là
