@@ -52,7 +52,8 @@ Encore à Lisbonne (Silva et al.,Naing et al.) : analyse multi-critère avec 19 
 
 Explication du fonctionnement des toits végétalisés dans l'image (lien ci-dessous) : 
 
-[<img src="https://www.guidebatimentdurable.brussels/servlet/Repository/65770.jpg?ID=65770">](https://www.guidebatimentdurable.brussels/servlet/Repository/65770.jpg?ID=65770)
+[<img src="fonctio_vert.png">](fonction_vert.png)
+
 
 *Peut-être que pour nous, si on veut amener des arbres, il faudrait utiliser une toiture-jardin, donc une végatation intensive*
 
@@ -83,13 +84,13 @@ Toits plats situés en majorité en périphérie et pas dans le centre-ville his
 
 Utilisation de T4GS : Tools For QGIS *(équivalent de t4gpd)*
 
-- Efficacité thermique : calcul avec QGIS et une formule théorique (à surface de toit vert égal, la végétalisation d'un bâtiment plus haut aura une efficacité thermique plus faible)
+- Efficacité thermique (**ET**): calcul avec QGIS et une formule théorique (à surface de toit vert égal, la végétalisation d'un bâtiment plus haut aura une efficacité thermique plus faible)
 
-- Réduction de l'îlot de chaleur : idem (beaucoup plus pertinent de créer des toits verts si ils sont regroupés, sinon peu utile)
+- Réduction de l'îlot de chaleur (**RICU**): idem (beaucoup plus pertinent de créer des toits verts si ils sont regroupés, sinon peu utile)
 
-- Surface verte visible : utilisation d'une aire effective moins importantes que la surface du toit (*buffer de -40cm*), utilisation du Sky View Factor (SVF) : on étudie *1 - SVF* pour savoir à quel point le toît vert est visible
+- Surface verte visible (**SVV**): utilisation d'une aire effective moins importantes que la surface du toit (*buffer de -40cm*), utilisation du Sky View Factor (SVF) : on étudie *1 - SVF* pour savoir à quel point le toît vert est visible
 
-- Exposition au soleil : étude avec un ciel clair et sans nuage (*discute pour Nantes, plus probable pour Lyon*), uniquement le 21ème jour de chaque mois, pour des intervalles d'une heure. On utilise alors la fonction SunshineDurationOnTopOfRoof de T4QS 
+- Exposition au soleil (**SUN RATIO**): étude avec un ciel clair et sans nuage (*discute pour Nantes, plus probable pour Lyon*), uniquement le 21ème jour de chaque mois, pour des intervalles d'une heure. On utilise alors la fonction SunshineDurationOnTopOfRoof de T4QS 
 
 ### Analyse Multi-critères 
 
@@ -99,4 +100,10 @@ Utilisation de T4GS : Tools For QGIS *(équivalent de t4gpd)*
 4. Obtention du potentiel par multiplication des deux
 5. Renormalisation 
 
+Dans les tableaux ci-dessous, on a la classification des résultats des indicateurs (0 étant le moins bien, 3 le meilleur)
+
 [<img src="Screenshot(8).png">](Screenshot(8).png)
+
+On obtient alors le potentiel de la manière suivante (avec A, B et C coefficients à discuter dont la somme est 1): 
+
+*Potentiel = SUN_RATIO*(A*ET + B*RICU + C*SVV)*
