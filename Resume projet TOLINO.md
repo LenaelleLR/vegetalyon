@@ -41,6 +41,14 @@ git push -f origin master
 - uniquement toits plats et à végétaliser
 - uniquement à l'intérieur de la ville de Nantes 
 
+## Chapitre 2 : Usage multiples des toits
 
+**Classification des toits en trois catégories** : Energétique (panneaux solaires, éoliennes...), Habité (nouveaux logements, espaces pour des commerces...) et Vert (Végétation, Agriculture, Fermes aquaponiques, Bassins etc.)
 
+*Description des toits energétiques et habités (peu pertinent dans le cadre de notre étude)* 
 
+### Toits verts 
+
+**Economiquement** : alternative à la rénovation pour la gestion des eaux pluviales et la ventilation (albédo important)
+
+![Fonctionnement toits verts](fonctio_vert.png)
