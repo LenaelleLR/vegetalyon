@@ -51,4 +51,5 @@ git push -f origin master
 
 **Economiquement** : alternative à la rénovation pour la gestion des eaux pluviales et la ventilation (albédo important)
 
-![Fonctionnement toits verts](https://www.guidebatimentdurable.brussels/servlet/Repository/65770.jpg?ID=65770)
+[<img src="https://www.guidebatimentdurable.brussels/servlet/Repository/65770.jpg?ID=65770">](https://www.guidebatimentdurable.brussels/)
+
