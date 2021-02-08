@@ -36,7 +36,6 @@ Encore à Lisbonne (Silva et al.,Naing et al.) : analyse multi-critère avec 19 
 4. Détermination du potentiel par analyse multi-critère
 
 **Hypothèses :**
-git push -f origin master
 - pas de prise en compte des critères techniques, socio-économiques, météorologiques
 - uniquement toits plats et à végétaliser
 - uniquement à l'intérieur de la ville de Nantes 
@@ -59,3 +58,45 @@ Explication du fonctionnement des toits végétalisés dans l'image (lien ci-des
 
 Autres solutions pour amener de la "verdure" en ville : serres de culture ( par exemple plantes aromatiques et fruits rouges ) ou fermes aquaponiques (culture de végétaux en symbiose avec l'élevage de poissons)
 
+## Chapitre 3 : Méthodologie et données pour l’évaluation du potentiel de réaménagement des toits végétalisés
+
+Choix de la zone d'étude : zone réduite car pas de logiciel libre pour la reconnaissance des toits plats et donc besoin de le faire à la main (via Google Earth). 
+Identification de la pente et de la programmation du toit aussi faite à la main (est-ce que le toit est déjà végétalisé ou pas ? est-ce qu'il est occupé ?)
+Toits plats situés en majorité en périphérie et pas dans le centre-ville historique. 
+
+*explication des avantages des toits végétalisés* 
+
+**Exigences des toits végétalisés** : 
+- structure résistante (charge permanente importante + si précipitations, poids des visiteurs si besoin)
+- résistance aux effets de soulevement dû au vent (parapets au moins à 500mm de distance des végétaux)
+- résistance au feu (**pas plus haut que 30m, surface <300m2 quand matériau non combustible, 900m2 sinon**)
+- étanchéité 
+- ensoleillement (**3h de soleil nécessaires en moyenne par jour**, dépend des espèces, en dessous d'1h pas envisageable)
+
+**Critères pris en compte pour l'étude**
+- Exposition au soleil
+- Efficacité thermique 
+- Réduction de l'îlot de chaleur
+- Surface verte visible pour l'amélioration du paysage urbain
+
+### Méthodologie avec QGIS et Python
+
+Utilisation de T4GS : Tools For QGIS *(équivalent de t4gpd)*
+
+- Efficacité thermique : calcul avec QGIS et une formule théorique (à surface de toit vert égal, la végétalisation d'un bâtiment plus haut aura une efficacité thermique plus faible)
+
+- Réduction de l'îlot de chaleur : idem (beaucoup plus pertinent de créer des toits verts si ils sont regroupés, sinon peu utile)
+
+- Surface verte visible : utilisation d'une aire effective moins importantes que la surface du toit (*buffer de -40cm*), utilisation du Sky View Factor (SVF) : on étudie *1 - SVF* pour savoir à quel point le toît vert est visible
+
+- Exposition au soleil : étude avec un ciel clair et sans nuage (*discute pour Nantes, plus probable pour Lyon*), uniquement le 21ème jour de chaque mois, pour des intervalles d'une heure. On utilise alors la fonction SunshineDurationOnTopOfRoof de T4QS 
+
+### Analyse Multi-critères 
+
+1. Normalisation des indicateurs sur une échelle allant de 0 à 3
+2. Coefficients de priorité 
+3. Calcul multicritères : besoins et bénéfices (séparément)
+4. Obtention du potentiel par multiplication des deux
+5. Renormalisation 
+
+[<img src="Screenshot(8).png">](Screenshot(8).png)
